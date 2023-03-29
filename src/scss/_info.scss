@@ -1,0 +1,148 @@
+.info {
+  position: relative;
+  padding: 60px 0;
+
+  @media (max-width: $breakpoint1450) {
+    padding: 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 195px;
+    height: 205px;
+    background-image: url('../img/info-decor.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: $breakpoint768) {
+      display: none;
+    }
+  }
+
+  // .info__inner
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    @media (max-width: $breakpoint992) {
+      flex-direction: column-reverse;
+      overflow: hidden;
+    }
+
+  }
+
+  // .info__img
+
+  &__img {
+    margin-left: -150px;
+
+    @media (max-width: $breakpoint1450) {
+      width: 600px;
+      margin-left: -100px;
+    }
+
+    @media (max-width: $breakpoint480) {
+      width: 380px;
+      margin-left: -50px;
+    }
+  }
+
+  // .info__info
+
+  &__info {
+    flex: 0 1 545px;
+
+    @media (max-width: $breakpoint992) {
+      flex: 0 1 auto;
+    }
+  }
+
+  // .info__title
+
+  &__title {
+    position: relative;
+
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: -58px;
+      width: 70px;
+      height: 70px;
+      background-image: url('../img/bullet-1.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @media (max-width: $breakpoint992) {
+        left: auto;
+        right: -30px;
+        width: 40px;
+        height: 40px;
+      }
+
+      @media (max-width: $breakpoint768) {
+        bottom: -5px;
+        right: -40px;
+      }
+    }
+
+    @media (max-width: $breakpoint992) {
+      width: fit-content;
+    }
+  }
+
+  // .info__texts
+
+  &__texts {
+    margin-bottom: 45px;
+  }
+
+  // .info__text
+
+  &__text {
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--white-color);
+
+    span {
+      color: var(--yellow-color);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  // .info__subtitle
+
+  &__subtitle {
+    font-family: var(--primary-font);
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 40px;
+    color: var(--white-color);
+
+    span {
+      color: var(--yellow-color);
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 20px;
+      line-height: 22px;
+    }
+  }
+}

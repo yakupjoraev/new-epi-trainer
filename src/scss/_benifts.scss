@@ -1,0 +1,189 @@
+.benifts {
+  position: relative;
+  padding: 60px 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10%;
+    transform: translateY(-50%);
+    width: 195px;
+    height: 205px;
+    background-image: url('../img/info-decor.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: $breakpoint768) {
+      display: none;
+    }
+  }
+
+  // .benifts__inner
+
+  &__inner {
+    position: relative;
+  }
+
+  // .benifts__title
+
+  &__title {}
+
+  // .benifts__list
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    counter-reset: list1;
+    margin-bottom: 45px;
+  }
+
+  // .benifts__item
+
+  &__item {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    min-height: 70px;
+    padding: 0 54px;
+    background-color: var(--blue-color);
+    border: 1px solid #999999;
+    border-radius: 20px;
+    background-image: url('../img/benifts-item-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    list-style-type: none;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--white-color);
+
+    &:before {
+      position: absolute;
+      left: 20px;
+      counter-increment: list1;
+      content: counter(list1) ".";
+      font-family: var(--primary-font);
+      font-weight: 900;
+      font-size: 22px;
+      line-height: 27px;
+      color: var(--yellow-color);
+
+      @media (max-width: $breakpoint768) {
+        left: 10px;
+        font-size: 18px;
+        line-height: 20px;
+      }
+    }
+
+    @media (max-width: $breakpoint768) {
+      padding: 0 30px;
+      min-height: 60px;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  // .benifts__price
+
+  &__price {
+    padding: 30px;
+    margin-left: 100px;
+    background-color: var(--blue-color);
+    border: 1px solid #999999;
+    border-radius: 30px;
+    background-image: url('../img/benifts-price-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center left;
+    font-family: var(--primary-font);
+    text-align: center;
+
+    @media (max-width:1200px) {
+      margin-left: 0;
+    }
+
+    @media (max-width: $breakpoint992) {
+      text-align: left;
+    }
+
+    @media (max-width: $breakpoint480) {
+      padding: 15px;
+      background-position: top left;
+    }
+  }
+
+  // .benifts__price-title
+
+  &__price-title {
+    margin-bottom: 18px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    color: var(--yellow-color);
+
+    @media (max-width: $breakpoint992) {
+      font-size: 28px;
+      line-height: 30px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 24px;
+      line-height: 16px;
+    }
+  }
+
+  // .benifts__descr
+
+  &__descr {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 40px;
+    color: var(--white-color);
+
+    @media (max-width: $breakpoint992) {
+      font-size: 22px;
+      line-height: 24px;
+      max-width: 500px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 20px;
+      line-height: 24px;
+      max-width: 300px;
+    }
+
+    @media (max-width: $breakpoint480) {
+      max-width: 100%;
+      font-size: 18px;
+    }
+  }
+
+  // .benifts__img
+
+  &__img {
+    position: absolute;
+    right: 0;
+    bottom: 160px;
+
+    @media (max-width:1200px) {
+      width: 250px;
+    }
+
+    @media (max-width: $breakpoint992) {
+      bottom: 0;
+      width: 150px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      width: 100px;
+    }
+
+    @media (max-width: $breakpoint480) {
+      display: none;
+    }
+  }
+}

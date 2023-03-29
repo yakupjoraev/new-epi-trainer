@@ -1,0 +1,233 @@
+.organizers {
+  padding: 100px 0;
+
+  @media (max-width: $breakpoint768) {
+    padding: 60px 0;
+  }
+
+  // .organizers__inner
+
+  &__inner {}
+
+  // .organizers__top
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 120px;
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 100px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      margin-bottom: 40px;
+    }
+  }
+
+  // .organizers__title
+
+  &__title {
+    margin-bottom: 0;
+
+    @media (max-width: $breakpoint768) {
+      margin-bottom: 0;
+    }
+  }
+
+  // .organizers__brands
+
+  &__brands {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    @media (max-width: $breakpoint768) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  // .organizers__brand
+
+  &__brand {}
+
+  // .organizers__brand-img
+
+  &__brand-img {}
+
+  // .organizers__bottom
+
+  &__bottom {}
+
+  // .organizers__info
+
+  &__info {
+    margin-bottom: 70px;
+    padding: 30px;
+    background-color: var(--blue-color);
+    border: 1px solid #999999;
+    border-radius: 30px;
+    background-image: url('../img/benifts-price-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center left;
+    font-family: var(--primary-font);
+    text-align: center;
+
+    @media (max-width:1200px) {
+      margin-left: 0;
+    }
+
+    @media (max-width: $breakpoint992) {
+      text-align: left;
+    }
+
+    @media (max-width: $breakpoint768) {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: $breakpoint480) {
+      padding: 15px;
+      background-position: -100px left;
+    }
+  }
+
+  // .organizers__info-title
+
+  &__info-title {
+    font-family: var(--primary-font);
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 66px;
+    text-align: center;
+    color: var(--white-color);
+
+    span {
+      color: var(--yellow-color);
+    }
+
+    @media (max-width: $breakpoint992) {
+      font-size: 46px;
+      line-height: 48px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 26px;
+      line-height: 38px;
+    }
+
+    @media (max-width: $breakpoint480) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  // .organizers__form
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+
+    @media (max-width: $breakpoint480) {
+      gap: 20px;
+    }
+  }
+
+  // .organizers__form-link
+
+  &__form-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px 46px;
+    width: 340px;
+    height: 75px;
+    background: linear-gradient(180deg, #FCE18B 0%, #FDCC43 100%);
+    box-shadow: 0px 4px 4px #AB800A;
+    border-radius: 30px;
+    line-height: 24px;
+    font-family: var(--secondary-font);
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1F1F1F;
+
+    @media (max-width: $breakpoint480) {
+      width: 240px;
+      height: 60px;
+    }
+  }
+
+  // .organizers__form-group
+
+  &__form-group {}
+
+  // .organizers__form-input
+
+  &__form-input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    z-index: -100;
+
+    &:checked~.organizers__form-label .organizers__label-decor::before {
+      opacity: 1;
+    }
+  }
+
+  // .organizers__form-label
+
+  &__form-label {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+  }
+
+  // .organizers__label-decor
+
+  &__label-decor {
+    position: relative;
+    width: 28px;
+    min-width: 28px;
+    height: 28px;
+    background-color: var(--blue-color);
+    border: 1px solid #999999;
+    border-radius: 5px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 16px;
+      height: 12px;
+      background-image: url('../img/check.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0;
+    }
+  }
+
+  // .organizers__label-descr
+
+  &__label-descr {
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+    color: var(--white-color);
+  }
+}

@@ -1,0 +1,142 @@
+.mentors {
+  position: relative;
+  padding-top: 100px;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 2%;
+    top: 0;
+    width: 138px;
+    height: 138px;
+    background-image: url('../img/bullet-1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: $breakpoint992) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  @media (max-width: $breakpoint992) {
+    padding-top: 60px;
+  }
+
+  // .mentors__inner
+
+  &__inner {}
+
+  // .mentors__title
+
+  &__title {}
+
+  // .mentors__list
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 76px 16px;
+
+    @media (max-width: $breakpoint992) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 50px;
+    }
+  }
+
+  // .mentors__item
+
+  &__item {
+    position: relative;
+  }
+
+  // .mentors__picture
+
+  &__picture {
+    position: relative;
+    margin-bottom: 25px;
+    width: 240px;
+    height: 318px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: -56px;
+      bottom: -20px;
+      width: 212px;
+      height: 311px;
+      background-image: url('../img/mentors-item-decor-1.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -1;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: -66px;
+      top: -62px;
+      width: 145px;
+      height: 200px;
+      transform: rotate(15deg);
+      background-image: url(../img/mentors-item-decor-2.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: 1;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    bottom: 11px;
+    right: 14px;
+  }
+
+  // .mentors__name
+
+  &__name {
+    margin-bottom: 18px;
+    font-family: var(--primary-font);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--yellow-color);
+
+    span {
+      color: var(--white-color);
+    }
+  }
+
+  // .mentors__item-list
+
+  &__item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: var(--white-color);
+  }
+
+  // .mentors__item-item
+
+  &__item-item {
+    position: relative;
+    display: inline-flex;
+    padding-left: 16px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 6px;
+      height: 6px;
+      border-radius: 100%;
+      background-color: var(--yellow-color);
+    }
+  }
+}

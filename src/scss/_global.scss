@@ -1,0 +1,94 @@
+// Container
+.container {
+  max-width: ($containerWidth + $containerPadding) + px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $containerSidePadding + px;
+
+  @media (max-width: $breakpoint1450) {
+    // max-width: 1200px;
+  }
+
+  @media (max-width: $breakpoint992) {
+    // max-width: 970px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    // max-width: 740px;
+  }
+
+  @media (max-width: $breakpoint480) {
+    // max-width: none;
+  }
+}
+
+// Body Locked
+body {
+  background-color: #121212;
+  // font-family: var(--primary-font);
+  // font-family: var(--secondary-font);
+
+  &.locked {
+    overflow: hidden;
+  }
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.main__body {
+  display: flex;
+  flex-direction: column;
+  // padding-right: 0 !important;
+}
+
+main {
+  flex: 1 1 auto;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-title {
+  margin-bottom: 45px;
+  font-family: var(--primary-font);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57px;
+  color: var(--white-color);
+
+  @media (max-width: $breakpoint992) {
+    margin-bottom: 30px;
+    font-size: 38px;
+    line-height: 42px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    margin-bottom: 20px;
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+}
+
+
+// Animations
+// Fade
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
